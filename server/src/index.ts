@@ -37,6 +37,11 @@ const io = new Server(httpServer, {
 
 setupSocket(io);
 
+console.log(
+  "PORT ENV:",
+  process.env.PORT
+);
+
 const PORT =
   Number(process.env.PORT) || 5000;
 
