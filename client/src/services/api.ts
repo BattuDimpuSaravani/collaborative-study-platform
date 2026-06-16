@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://collaborative-study-platform-production.up.railway.app";
 
 export async function loginUser(
   email: string,
@@ -71,7 +71,7 @@ export async function getAllRooms() {
     localStorage.getItem("token");
 
   const response = await fetch(
-    "http://localhost:5000/rooms",
+    `${API_URL}/rooms`,
     {
       headers: {
         Authorization:
@@ -90,7 +90,7 @@ export async function joinRoom(
     localStorage.getItem("token");
 
   const response = await fetch(
-    `http://localhost:5000/rooms/join/${roomId}`,
+    `${API_URL}/rooms/join/${roomId}`,
     {
       method: "POST",
       headers: {
@@ -114,7 +114,7 @@ export async function createRoom(
 
   const response =
     await fetch(
-      "http://localhost:5000/rooms/create",
+      `${API_URL}/rooms/create`,
       {
         method: "POST",
         headers: {
@@ -145,7 +145,7 @@ export async function deleteRoom(
 
   const response =
     await fetch(
-      `http://localhost:5000/rooms/${roomId}`,
+      `${API_URL}/rooms/${roomId}`,
       {
         method: "DELETE",
         headers: {
@@ -166,7 +166,7 @@ export async function getCreatedRooms() {
 
   const response =
     await fetch(
-      "http://localhost:5000/rooms/created",
+      `${API_URL}/rooms/created`,
       {
         headers: {
           Authorization:
@@ -188,7 +188,7 @@ export async function leaveRoom(
 
   const response =
     await fetch(
-      `http://localhost:5000/rooms/leave/${roomId}`,
+      `${API_URL}/rooms/leave/${roomId}`,
       {
         method: "DELETE",
         headers: {
