@@ -379,7 +379,7 @@ async () => {
       (resource) => (
         <a
           key={resource.id}
-          href={`http://localhost:5000/uploads/${resource.file_path}`}
+          href={`https://collaborative-study-platform-production.up.railway.app/uploads/${resource.file_path}`}
           target="_blank"
           rel="noreferrer"
           className="block bg-white p-3 rounded shadow"
